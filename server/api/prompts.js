@@ -22,6 +22,15 @@ router.post("/", function (req, res) {
         category: req.body.category,
     });
     newPrompt.promptId = newPrompt._id;
+
+    newPrompt.save(function (err) {
+        if (err) {
+          console.log(err);
+          res.status(400).send("Error" + err);
+        } else {
+          res.send(newPrompt);
+        }
+    });
 });
 
 export default router;

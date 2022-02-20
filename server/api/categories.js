@@ -32,6 +32,15 @@ router.post("/", function (req, res) {
         img: req.body.img,
     });
     newCategory.categoryId = newCategory._id;
+
+    newCategory.save(function (err) {
+        if (err) {
+          console.log(err);
+          res.status(400).send("Error" + err);
+        } else {
+          res.send(newCategory);
+        }
+    });
 });
 
 export default router;

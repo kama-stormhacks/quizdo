@@ -27,7 +27,7 @@ const categoryModel = mongoose.model("categories", categorySchema);
 const promptSchema = mongoose.Schema({
     question: String,
     answers: mongoose.Schema.Types.Array,
-    category: String,
+    category: mongoose.Schema.Types.ObjectId,
 });
 const promptModel = mongoose.model("prompts", promptSchema);
 
