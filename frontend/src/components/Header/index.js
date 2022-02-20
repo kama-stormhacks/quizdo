@@ -14,8 +14,10 @@ const HeaderNav = (props) => {
         <Link to="/" style={ styles.linkText }>home</Link>
         <Link to="/category" style={ styles.linkText }>challenge</Link>
         <Btn 
-          text="Create Account" 
-          btnWidth="200px"
+          text="Create Account"
+          size="20px" 
+          btnW="200px"
+          btnH="50px"
         />
       </RightInnCont>
     </Cont>    
@@ -58,8 +60,9 @@ const RightInnCont = styled.div`
 var styles = {
   linkText: {
     fontFamily: "Poppins",
-    fontSize: "24px",
+    fontSize: "20px",
     color: "#000",
-
+    textDecoration: "none",
+    
   },
 }

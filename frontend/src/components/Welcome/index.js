@@ -11,7 +11,12 @@ const WelcomeWindow = (props) => {
       <Title>Welcome to Quizdo</Title>
       <Subtitle>Join a random group to compete in a daily challenge. Whoever answers the prompt wins!</Subtitle>
 
-      <BaseBtn text="Get Started" />
+      <BaseBtn 
+        text="Get Started" 
+        size="20px"
+        btnW="166px"
+        btnH="50px"
+      />
     </Cont>
   )
 }
@@ -33,7 +38,7 @@ const Cont = styled.div`
 `
 
 const Logo = styled.img`
-  width: 356px;
+  width: 300px;
 `
 
 const Title = styled.h1`
@@ -46,4 +51,6 @@ const Subtitle = styled.h2`
   font-family: "Poppins";
   font-size: 24px;
   font-weight: normal;
+  
+  margin-top: 0;
 `
