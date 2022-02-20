@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-class BaseBtn extends React.Component{
+export default class BaseBtn extends React.Component{
   render() {
     return (
       <BtnCont>
@@ -11,7 +11,7 @@ class BaseBtn extends React.Component{
   }
 }
 
-export default class GetStartedBtn extends React.Component{
+class GetStartedBtn extends React.Component{
   render() {
     return <BaseBtn text="Get Started" />
   }

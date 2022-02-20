@@ -1,15 +1,18 @@
 div {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   text-align: center;
 }
 
 .appCont {
+  /* display: flex; */
+  flex-direction: column;
+
   background-color: #98D2BA;
 
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .welcomeCont {
@@ -19,7 +22,7 @@ div {
   border-radius: 20px;
 
   width: 45%;
-  height: 80%;
+  min-height: 80vh;
 }
 
   .welcomeCont > h1, h2 {

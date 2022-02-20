@@ -4,20 +4,19 @@ import styled from 'styled-components';
 export default class HeaderNav extends React.Component{
   render() {
     return (
-      <div style={ styles.cont }>
-
-      </div>
+      <Cont>
+        
+      </Cont>
     )
   }
 }
 
-var styles = {
-  cont: {
-    display: "flex",
+const Cont = styled.div`
+  display: flex;
 
-    backgroundColor: "#FFFFFF",
+  background-color: #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-    width: "100vw",
-    height: "174px"
-  }
-}
+  width: 100vw;
+  height: 100px;
+`
