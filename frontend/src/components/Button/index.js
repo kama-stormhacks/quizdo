@@ -27,8 +27,8 @@ const BtnCont = styled.button`
   
   background-color: #00918E;
 
-  width: ${props => props.btnWidth || "258px"};
-  height: ${props => props.btnHeight || "77px"};
+  width: ${props => props.btnWidth || "200px"};
+  height: ${props => props.btnHeight || "50px"};
 
   :hover {
     opacity: 0.5;
@@ -37,6 +37,6 @@ const BtnCont = styled.button`
 
 const BtnText = styled.p`
   font-family: Poppins;
-  font-size: 24px;
+  font-size: 15px;
   color: #FFFFFF;
 `
