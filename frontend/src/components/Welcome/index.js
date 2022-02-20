@@ -36,12 +36,12 @@ const Cont = styled.div`
   border-radius: 20px;
   background-color: #FFFFFF;
 
-  width: 600px;
+  width: 500px;
   height: 500px;
 `
 
 const Logo = styled.img`
-  width: 300px;
+  width: 250px;
 `
 
 const Title = styled.h1`
@@ -56,13 +56,28 @@ const Subtitle = styled.h2`
   font-weight: normal;
   
   margin-top: 0;
+
+  max-width: 450px;
 `
 
 var styles = {
   link: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+
     backgroundColor: "#00918E",
+
+    borderRadius: "20px",
+
     width: "166px",
     height: "50px",
-    fontSize: "20px",
+
+    textDecoration: "none",
+    fontSize: "18px",
+    color: "white",
+
+    marginTop: "1rem",
+    
   }
 }
