@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const BaseBtn = (props) => {
   return (
-    <BtnCont>
+    <BtnCont btnHeight={props.height} btnWidth={props.width}>
       <BtnText>{props.text}</BtnText>
     </BtnCont>
   )
@@ -21,8 +21,8 @@ const BtnCont = styled.button`
   
   background-color: #00918E;
 
-  width: ${props => props.btnWidth || "258px"};
-  height: ${props => props.btnHeight || "77px"};
+  width: ${props => props.btnWidth};
+  height: ${props => props.btnHeight};
 
   :hover {
     opacity: 0.5;
@@ -33,4 +33,6 @@ const BtnText = styled.p`
   font-family: Poppins;
   font-size: 24px;
   color: #FFFFFF;
+
+  margin: 0;
 `

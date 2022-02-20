@@ -33,7 +33,7 @@ const Cont = styled.div`
 `
 
 const Logo = styled.img`
-  width: 356px;
+  width: 300px;
 `
 
 const Title = styled.h1`
