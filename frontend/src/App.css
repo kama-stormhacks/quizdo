@@ -1,3 +1,46 @@
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.appCont {
+  background-color: #98D2BA;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+.welcomeCont {
+  flex-direction: column;
+  
+  background-color: #FFFFFF;
+  border-radius: 20px;
+
+  width: 45%;
+  height: 80%;
+}
+
+  .welcomeCont > h1, h2 {
+    font-family: "Poppins";
+  }
+
+    .welcomeCont h1 {
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    .welcomeCont h2 {
+      font-size: 24px;
+      font-weight: normal;
+
+      max-width: 588px;
+    }
+
+
+
+/* init styles ========================================================= */
 .App {
   text-align: center;
 }
