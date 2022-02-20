@@ -11,7 +11,7 @@ You'll need to install [node](https://nodejs.org/en/) on your computer
 
 ## Running the Express App on Localhost
 
-1. In your terminal and within the root directory, `web-app`
+1. In your terminal and within the root directory, `quizdo`
 1. `npm install`
    - Installs all the npm dependencies in `package.json`
 1. `npm run dev`
