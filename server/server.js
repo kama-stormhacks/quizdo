@@ -25,7 +25,7 @@ app.use("/user", user);
 
 console.log(process.cwd());
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8000;
 
 const server = http.createServer(app);
 server.listen(PORT, () => console.log(`Listening on ${PORT}`));
