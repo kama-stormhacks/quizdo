@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import HeaderNav from './components/Header';
 import Button from './components/Button';
+import ProgressBar from './components/Progress';
 
 export default class WelcomePage extends React.Component{
   render() {
@@ -13,6 +14,8 @@ export default class WelcomePage extends React.Component{
           </div>
 
           <Wrapper>
+          <ProgressBar/>
+
             <Container>
                 <h1 style={ styles.text}>Let's Set Up Your Account</h1>
 
@@ -51,6 +54,8 @@ export default class WelcomePage extends React.Component{
 const Body = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #98D2BA;
   height: 100vh;
   width: 100wh;
@@ -60,6 +65,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
 
   background-color: #FFFFFF;
   width: 400px;
@@ -73,6 +79,7 @@ const Container = styled.div`
 
 const Wrapper = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   flex: 1;
@@ -87,6 +94,7 @@ const FirstName = styled.div`
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  padding: 10px;
 
 `;
 
@@ -94,6 +102,7 @@ const LastName = styled.div`
   display: flex;
   flex-direction: column;
   flex-grow: 2;
+  padding: 10px;
 `;
 
 const Email = styled.div`
