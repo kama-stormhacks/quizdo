@@ -14,6 +14,17 @@ router.get("/all", function(req, res) {
     });
 });
 
+// get category by id
+router.get("/:categoryId", function(req, res) {
+    model.categoryModel.findById(req.params.categoryId, function (err, response) {
+        if (err) {
+            res.status(400).send("Error" + err);
+        } else {
+            res.json(response);
+        }
+    });
+});
+
 // post category
 router.post("/", function (req, res) {
     const newCategory = new model.categoryModel({
@@ -21,4 +32,15 @@ router.post("/", function (req, res) {
         img: req.body.img,
     });
     newCategory.categoryId = newCategory._id;
+
+    newCategory.save(function (err) {
+        if (err) {
+          console.log(err);
+          res.status(400).send("Error" + err);
+        } else {
+          res.send(newCategory);
+        }
+    });
 });
+
+export default router;

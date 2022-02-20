@@ -41,4 +41,15 @@ router.post("/", function (req, res) {
         gamesPlayed: req.body.gamesPlayed,
     });
     newUser.userId = newUser._id;
+
+    newUser.save(function (err) {
+        if (err) {
+          console.log(err);
+          res.status(400).send("Error" + err);
+        } else {
+          res.send(newUser);
+        }
+    });
 });
+
+export default router;
