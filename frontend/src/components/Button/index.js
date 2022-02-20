@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export default class BaseBtn extends React.Component{
   render() {
     return (
-      <BtnCont>
+      <BtnCont onClick={()=>{}}>
         <BtnText>{ this.props.text }</BtnText>
       </BtnCont>
     )
@@ -27,8 +27,8 @@ const BtnCont = styled.button`
   
   background-color: #00918E;
 
-  width: 258px;
-  height: 77px;
+  width: ${props => props.btnWidth || "258px"};
+  height: ${props => props.btnHeight || "77px"};
 
   :hover {
     opacity: 0.5;

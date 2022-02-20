@@ -18,3 +18,16 @@ export default function App() {
   );
 }
 
+class Login extends React.Component{
+  render() {
+    return (
+      <div className="appCont">
+        <div>
+          <HeaderNav />
+        </div>
+
+      </div>
+    )
+  }
+}
+

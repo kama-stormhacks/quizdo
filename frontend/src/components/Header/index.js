@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import logo from '../../images/quizdo_logo.svg';
+import { Routes, Route, Link } from 'react-router-dom';
+import Btn from '../Button';
 
 export default class HeaderNav extends React.Component{
   render() {
@@ -10,7 +12,12 @@ export default class HeaderNav extends React.Component{
           <Logo src={logo} />
         </LeftInnCont>
         <RightInnCont>
-          
+          <Link to="/" style={ styles.linkText }>home</Link>
+          <Link to="/category" style={ styles.linkText }>challenge</Link>
+          <Btn 
+            text="Create Account" 
+            btnWidth="200px"
+          />
         </RightInnCont>
       </Cont>
     )
@@ -47,3 +54,12 @@ const RightInnCont = styled.div`
 
   flex: 1;
 `
+
+var styles = {
+  linkText: {
+    fontFamily: "Poppins",
+    fontSize: "24px",
+    color: "#000",
+
+  },
+}
