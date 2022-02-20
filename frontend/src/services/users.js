@@ -13,12 +13,37 @@ class UsersDataService {
       const body = totalWins;
       return http.put(`users/${userId}`, body);
   }
-
-  postTotalWins(userId, gamesPlayed){
-    const body = gamesPlayed;
-    return http.put(`users/${userId}`, body);
-  }
-
 }
 
-export default new UsersDataService();
+export const retrieveAllUsers = () => {
+  UsersDataService.getAll()
+    .then((response) => {
+      return response.data;
+    })
+    .catch((e) => {
+      console.log(e);
+      return null;
+    });
+};
+
+export const retrieveUserById = (id) => {
+  UsersDataService.getUser(id)
+    .then((response) => {
+      return response.data;
+    })
+    .catch((e) => {
+      console.log(e);
+      return null;
+    });
+};
+
+export const postWins = (id) => {
+  UsersDataService.postTotalWins(id)
+    .then((response) => {
+      return response.data;
+    })
+    .catch((e) => {
+      console.log(e);
+      return null;
+    });
+};

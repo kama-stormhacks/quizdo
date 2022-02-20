@@ -10,4 +10,24 @@ class CategoriesDataService {
   }
 }
 
-export default new CategoriesDataService();
+export const retrieveCategory = (id) => {
+  CategoriesDataService.getName(id)
+    .then((response) => {
+      return response.data;
+    })
+    .catch((e) => {
+      console.log(e);
+      return null;
+    });
+}
+
+export const retrieveImg = (id) => {
+  CategoriesDataService.getImg(id)
+    .then((response) => {
+      return response.data;
+    })
+    .catch((e) => {
+      console.log(e);
+      return null;
+    });
+}
