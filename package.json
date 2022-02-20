@@ -22,13 +22,15 @@
   },
   "homepage": "https://github.com/kama-stormhacks/quizdo#readme",
   "dependencies": {
+    "color-namer": "^1.4.0",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "http": "^0.0.1-security",
     "mongoose": "^5.13.3",
     "nodemon": "^2.0.12",
-    "color-namer": "^1.4.0",
-    "ws": "^8.3.0",
-    "http": "^0.0.1-security"
+    "sass": "^1.49.8",
+    "styled-components": "^5.3.3",
+    "ws": "^8.3.0"
   }
 }
