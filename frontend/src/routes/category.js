@@ -1,10 +1,26 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import styled from 'styled-components';
 import HeaderNav from '../components/Header';
 import CategoryCard from '../components/Category';
+import CategoriesDataService from '../services/categories.js'
 
 const CategoryPage = () => {
+  const [category, setCategory] = useState([]);
 
+  const retrieveCategory = () => {
+    CategoriesDataService.getAll()
+      .then((response) => {
+        //console.log(response.name);
+        setCategory(response.data); // set the category if success
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  };
+
+  useEffect(() => {
+    retrieveCategory();
+  }, []);
 
   return (
     <Cont>
@@ -12,12 +28,12 @@ const CategoryPage = () => {
         <HeaderNav />
       </div>
 
-      {/* <div style={ styles.body }>
-        <CategoryCard title={}/>
-        <CategoryCard title={}/>
-        <CategoryCard title={}/>
-        <CategoryCard title={}/>
-      </div> */}
+      {<div style={ styles.body }>
+        <CategoryCard title={"Biology"}/>
+        <CategoryCard title={"Chemistry"}/>
+        <CategoryCard title={"Physics"}/>
+        <CategoryCard title={"Math"}/>
+      </div> }
     </Cont>
   )
 }
