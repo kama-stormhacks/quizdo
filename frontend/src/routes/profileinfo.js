@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import HeaderNav from './components/Header';
 import Button from './components/Button';
 import ProgressBar from './components/Progress';
+import AddPic from './components/AddPicture';
 
 export default class WelcomePage extends React.Component{
   render() {
@@ -14,32 +15,42 @@ export default class WelcomePage extends React.Component{
           </div>
 
           <Wrapper>
-          <ProgressBar/>
+          <ProgressBar
+            progWidth="20vw"
+          />
 
             <Container>
-                <h1 style={ styles.text}>Let's Set Up Your Account</h1>
+                <h1 style={ styles.text}>Profile Information</h1>
 
-                <NameContainer>
-                  <FirstName>
-                    <p>First Name</p>
-                    <Input></Input>
-                  </FirstName>
-
-                  <LastName>
-                    <p>Last Name</p>
-                    <Input></Input>
-                  </LastName>
-                </NameContainer>
-
-              <Email>
-                <p>Email Address</p>
+              <AvatarContainer>
+                <Avatar>U</Avatar>
+                <AddPic style={ styles.bttnposition}/>
+              </AvatarContainer>
+              
+              <Item>
+                <p>What school are you currently attending? </p>
                   <Input
                     style={ styles.input2}
                   />
-              </Email>
+              </Item>  
+
+
+              <Item>
+                <p>What field of study are you enrolled in?</p>
+                  <Input
+                    style={ styles.input2}
+                  />
+              </Item>
+
+              <Item>
+                <p>What year are you in?</p>
+                  <Input
+                    style={ styles.input2}
+                  />
+              </Item>
 
                 <Button
-                text="Set Up Profile"
+                text="Finish Set Up"
                 />
               </Container>
           </Wrapper>
@@ -69,12 +80,31 @@ const Container = styled.div`
 
   background-color: #FFFFFF;
   width: 400px;
-  height: 400px;
+  height: 525px;
 
   border-radius: 20px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 20px;
 
+`;
+
+const AvatarContainer = styled.div`
+  width: 100px;
+  height: 100px;
+`;
+
+const Avatar = styled.div`
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  border: 1px solid #C4C4C4;
+  background-color: background-color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 40px;
+  color: #C4C4C4;
 `;
 
 const Wrapper = styled.div`
@@ -85,27 +115,7 @@ const Wrapper = styled.div`
   flex: 1;
 `;
 
-const NameContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-`;
-
-const FirstName = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  padding: 10px;
-
-`;
-
-const LastName = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex-grow: 2;
-  padding: 10px;
-`;
-
-const Email = styled.div`
+const Item = styled.div`
   margin: 0;
 `;
 
@@ -122,5 +132,11 @@ var styles = {
 
   text: {
     fontSize: "25px",
+  },
+
+  bttnposition: {
+    position: "absolute",
+    display: "flex",
+    justifyContent: "flex-end",
   },
 }
