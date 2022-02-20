@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import BaseBtn from '../Button';
 import logo from '../../images/quizdo_logo.svg';
 
@@ -11,7 +12,7 @@ export default class WelcomeWindow extends React.Component{
         <Title>Welcome to Quizdo</Title>
         <Subtitle>Join a random group to compete in a daily challenge. Whoever answers the prompt wins!</Subtitle>
 
-        <BaseBtn text="Get Started"/>
+        <BaseBtn text="Get Started" />
       </Cont>
     )
   }

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export default class BaseBtn extends React.Component{
   render() {
     return (
-      <BtnCont onClick={()=>{}}>
+      <BtnCont onClick={this.props.clickClack}>
         <BtnText>{ this.props.text }</BtnText>
       </BtnCont>
     )

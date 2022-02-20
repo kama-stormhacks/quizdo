@@ -1,33 +1,52 @@
 import React from 'react';
+import { Routes, Route, Link } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 
-import WelcomeWindow from './components/Welcome';
 import HeaderNav from './components/Header';
+import WelcomeWindow from './components/Welcome';
+import LoginWindow from './components/Login';
 
 export default function App() {
+  return (
+    <div className="appCont">
+      <Routes>
+        {/* <Route index element={<App />} /> */}
+        <Route index element={<Welcome />} />
+        <Route path="login" element={<Login />} />
+      </Routes>
+    </div>
+  );
+}
+
+function Welcome(){
   return (
     <div className="appCont">
       <div>
         <HeaderNav />
       </div>
       <div className='welcomeCont'>
-        <WelcomeWindow />
+        <WelcomeWindow clickClack={<Link to="login" />} />
+      </div>
+
+      <Routes>
+        {/* <Route index element={<App />} /> */}
+        <Route path="login" element={<Login />} />
+      </Routes>
+    </div>
+  )
+}
+
+function Login(){
+  return(
+    <div className='appCont'>
+      <div>
+        <HeaderNav />
+      </div>
+
+      <div className='loginCont'>
+        <LoginWindow />
       </div>
     </div>
-  );
+  )
 }
-
-class Login extends React.Component{
-  render() {
-    return (
-      <div className="appCont">
-        <div>
-          <HeaderNav />
-        </div>
-
-      </div>
-    )
-  }
-}
-
