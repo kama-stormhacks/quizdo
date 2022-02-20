@@ -23,3 +23,5 @@ router.post("/", function (req, res) {
     });
     newPrompt.promptId = newPrompt._id;
 });
+
+export default router;

@@ -1,7 +1,5 @@
 import mongoose from "mongoose";
 
-const Schema = mongoose.Schema;
-
 //Model for user
 const userSchema = mongoose.Schema({
     guest: Boolean,
@@ -11,18 +9,18 @@ const userSchema = mongoose.Schema({
     lastName: String,
     fieldOfStudy: String,
     school: String,
-    totalWins: Int,
+    totalWins: Number,
     dailyFlag: Boolean,
-    gamesPlayed: Int,
+    gamesPlayed: Number,
 });
-const userModel = mongoose.userModel("users", userSchema);
+const userModel = mongoose.model("users", userSchema);
 
 //Model for category
 const categorySchema = mongoose.Schema({
     name: String,
     img: String,
 });
-const categoryModel = mongoose.categoryModel("categories", categorySchema);
+const categoryModel = mongoose.model("categories", categorySchema);
 
 
 //Model for prompts
@@ -31,5 +29,6 @@ const promptSchema = mongoose.Schema({
     answers: mongoose.Schema.Types.Array,
     category: String,
 });
-const promptModel = mongoose.promptModel("prompts", promptSchema);
+const promptModel = mongoose.model("prompts", promptSchema);
 
+export default { userModel, categoryModel, promptModel };

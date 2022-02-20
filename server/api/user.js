@@ -42,3 +42,5 @@ router.post("/", function (req, res) {
     });
     newUser.userId = newUser._id;
 });
+
+export default router;
