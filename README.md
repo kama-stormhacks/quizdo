@@ -15,4 +15,4 @@ You'll need to install [node](https://nodejs.org/en/) on your computer
 1. `npm install`
    - Installs all the npm dependencies in `package.json`
 1. `npm run dev`
-   - This will start running the backend/Node/Express app on http://localhost:5000/
+   - This will start running the backend/Node/Express app on http://localhost:8000/
