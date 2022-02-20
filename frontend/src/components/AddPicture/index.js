@@ -20,8 +20,9 @@ const BtnCont = styled.button`
   background-color: #C4C4C4;
   
 
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
+  outline: none;
 
   :hover {
     opacity: 0.5;
