@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
-import logo from './logo.svg';
+import logo from './images/quizdo_logo.svg';
 import './App.css';
 
 import HeaderNav from './components/Header';
@@ -44,7 +44,7 @@ function Login(){
         <HeaderNav />
       </div>
 
-      <div className='loginCont'>
+      <div className='welcomeCont'>
         <LoginWindow />
       </div>
     </div>
