@@ -11,6 +11,7 @@ import {
 import WelcomePage from './routes/welcome';
 import LoginPage from './routes/login';
 import CategoryPage from './routes/category';
+import LeaderboardPage from './routes/leaderboard';
 
 ReactDOM.render(
   // <React.StrictMode>
@@ -22,6 +23,7 @@ ReactDOM.render(
       <Route path='welcome' element={<WelcomePage />} />
       <Route path='login' element={<LoginPage />} />
       <Route path='category' element={<CategoryPage />} />
+      <Route path='leaderboard' element={<LeaderboardPage />} />
     </Routes>
   </BrowserRouter>,
   document.getElementById('root')

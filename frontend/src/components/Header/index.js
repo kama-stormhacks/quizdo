@@ -34,7 +34,8 @@ const Cont = styled.div`
 
   width: 100vw;
   height: 50px;
-  padding: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 `
 
 const LeftInnCont = styled.div`

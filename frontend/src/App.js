@@ -10,6 +10,7 @@ import LoginWindow from './components/Login';
 import WelcomePage from './routes/welcome';
 import LoginPage from './routes/login';
 import CategoryPage from './routes/category';
+import LeaderboardPage from './routes/leaderboard';
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
         <Route index element={<Welcome />} />
         <Route path="login" element={<LoginPage />} />
         <Route path="category" element={<CategoryPage />} />
+        <Route path="leaderboard" element={<LeaderboardPage />} />
       </Routes>
 
       <Outlet />
