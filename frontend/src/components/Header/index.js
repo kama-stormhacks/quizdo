@@ -4,25 +4,27 @@ import logo from '../../images/quizdo_logo.svg';
 import { Routes, Route, Link } from 'react-router-dom';
 import Btn from '../Button';
 
-export default class HeaderNav extends React.Component{
-  render() {
-    return (
-      <Cont>
-        <LeftInnCont>
-          <Logo src={logo} />
-        </LeftInnCont>
-        <RightInnCont>
-          <Link to="/" style={ styles.linkText }>home</Link>
-          <Link to="/category" style={ styles.linkText }>challenge</Link>
-          <Btn 
-            text="Create Account" 
-            btnWidth="200px"
-          />
-        </RightInnCont>
-      </Cont>
-    )
-  }
+const HeaderNav = (props) => {
+  return (
+    <Cont>
+      <LeftInnCont>
+        <Logo src={logo} />
+      </LeftInnCont>
+      <RightInnCont>
+        <Link to="/" style={ styles.linkText }>home</Link>
+        <Link to="/category" style={ styles.linkText }>challenge</Link>
+        <Btn 
+          text="Create Account"
+          size="20px" 
+          btnW="200px"
+          btnH="50px"
+        />
+      </RightInnCont>
+    </Cont>    
+  )
 }
+
+export default HeaderNav;
 
 const Cont = styled.div`
   display: flex;
@@ -32,7 +34,8 @@ const Cont = styled.div`
 
   width: 100vw;
   height: 50px;
-  padding: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 `
 
 const LeftInnCont = styled.div`

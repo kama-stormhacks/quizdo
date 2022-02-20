@@ -3,14 +3,28 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom';
+import { 
+  BrowserRouter,
+  Routes,
+  Route
+} from 'react-router-dom';
+import WelcomePage from './routes/welcome';
+import LoginPage from './routes/login';
+import CategoryPage from './routes/category';
+import LeaderboardPage from './routes/leaderboard';
 
 ReactDOM.render(
   // <React.StrictMode>
   //   <App />
   // </React.StrictMode>,
   <BrowserRouter>
-    <App />
+    <Routes>
+      <Route path='/' element={<App />} />
+      <Route path='welcome' element={<WelcomePage />} />
+      <Route path='login' element={<LoginPage />} />
+      <Route path='category' element={<CategoryPage />} />
+      <Route path='leaderboard' element={<LeaderboardPage />} />
+    </Routes>
   </BrowserRouter>,
   document.getElementById('root')
 );

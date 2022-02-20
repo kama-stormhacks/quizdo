@@ -4,10 +4,11 @@ import styled from 'styled-components';
 
 const Results = (props) => {
     return(
-        <Cont>
-            <Item1>{props.name}</Item1>
-            <Item2>{props.result}</Item2>
-        </Cont>
+      <Cont bgcolor={ props.bgcolor }>
+        <Ranking>{ props.ranking }</Ranking>
+        <Item1>{ props.name }</Item1>
+        <Item2>{ props.result }</Item2>
+      </Cont>
     )
 }
 
@@ -28,11 +29,18 @@ const Cont = styled.div`
   font-size: 15px;
 `
 
+const Ranking = styled.div`
+  display: flex;
+  justify-content: center;
+  color: #FFFFFF;
+  margin: 20px;
+`
+
 const Item1 = styled.div`
     display: flex;
     justify-content: start; 
     color: #FFFFFF;
-    margin: 10px;
+    margin: 0;
 `;
 
 const Item2 = styled.div`
@@ -40,6 +48,6 @@ const Item2 = styled.div`
     justify-content: end; 
     flex-grow: 1;
     color: #FFFFFF;
-    margin: 10px;
+    margin: 30px;
 
 `;

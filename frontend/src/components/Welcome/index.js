@@ -1,21 +1,30 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import BaseBtn from '../Button';
 import logo from '../../images/quizdo_logo.svg';
 
-export default class WelcomeWindow extends React.Component{
-  render() {
-    return (
-      <Cont>
-        <Logo src={logo} />
-        <Title>Welcome to Quizdo</Title>
-        <Subtitle>Join a random group to compete in a daily challenge. Whoever answers the prompt wins!</Subtitle>
+const WelcomeWindow = (props) => {
+  return (
+    <Cont>
+      <Logo src={ logo } />
+      <Title>Welcome to Quizdo</Title>
+      <Subtitle>Join a random group to compete in a daily challenge. Whoever answers the prompt wins!</Subtitle>
 
-        <BaseBtn text="Get Started"/>
-      </Cont>
-    )
-  }
+      <Link to={ props.linkTo } style={ styles.link }>
+        Get Started
+      </Link>
+      {/* <BaseBtn 
+        text="Get Started" 
+        size="20px"
+        btnW="166px"
+        btnH="50px"
+      /> */}
+    </Cont>
+  )
 }
+
+export default WelcomeWindow;
 
 const Cont = styled.div`
   display: flex;
@@ -32,7 +41,7 @@ const Cont = styled.div`
 `
 
 const Logo = styled.img`
-  width: 356px;
+  width: 300px;
 `
 
 const Title = styled.h1`
@@ -45,4 +54,15 @@ const Subtitle = styled.h2`
   font-family: "Poppins";
   font-size: 24px;
   font-weight: normal;
+  
+  margin-top: 0;
 `
+
+var styles = {
+  link: {
+    backgroundColor: "#00918E",
+    width: "166px",
+    height: "50px",
+    fontSize: "20px",
+  }
+}

@@ -1,21 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default class BaseBtn extends React.Component{
-  render() {
-    return (
-      <BtnCont onClick={()=>{}}>
-        <BtnText>{ this.props.text }</BtnText>
-      </BtnCont>
-    )
-  }
+const BaseBtn = (props) => {
+  return (
+    <BtnCont 
+      btnHeight={props.btnH} 
+      btnWidth={props.btnW} 
+      onClick={props.onClickBtn}
+    >
+      <BtnText size={props.size}>{props.text}</BtnText>
+    </BtnCont>
+  )
 }
 
-class GetStartedBtn extends React.Component{
-  render() {
-    return <BaseBtn text="Get Started" />
-  }
-}
+export default BaseBtn;
 
 const BtnCont = styled.button`
   display: flex;
@@ -40,4 +38,6 @@ const BtnText = styled.p`
   font-family: Poppins;
   font-size: 15px;
   color: #FFFFFF;
+
+  margin: 0;
 `
