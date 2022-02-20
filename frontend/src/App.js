@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link, Outlet } from 'react-router-dom';
 import logo from './images/quizdo_logo.svg';
 import './App.css';
 
@@ -7,14 +7,19 @@ import HeaderNav from './components/Header';
 import WelcomeWindow from './components/Welcome';
 import LoginWindow from './components/Login';
 
+import WelcomePage from './routes/welcome';
+import LoginPage from './routes/login';
+
 export default function App() {
   return (
     <div className="appCont">
       <Routes>
         {/* <Route index element={<App />} /> */}
         <Route index element={<Welcome />} />
-        <Route path="login" element={<Login />} />
+        <Route path="login" element={<LoginPage />} />
       </Routes>
+
+      <Outlet />
     </div>
   );
 }
@@ -26,21 +31,7 @@ function Welcome(){
         <HeaderNav />
       </div>
       <div className='welcomeCont'>
-        <WelcomeWindow onClickBtn={() => <Link to="login"/>} />
-      </div>
-    </div>
-  )
-}
-
-function Login(){
-  return(
-    <div className='appCont'>
-      <div>
-        <HeaderNav />
-      </div>
-
-      <div className='welcomeCont'>
-        <LoginWindow />
+        <WelcomeWindow linkTo="login" />
       </div>
     </div>
   )

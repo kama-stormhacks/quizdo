@@ -7,16 +7,19 @@ import logo from '../../images/quizdo_logo.svg';
 const WelcomeWindow = (props) => {
   return (
     <Cont>
-      <Logo src={logo} />
+      <Logo src={ logo } />
       <Title>Welcome to Quizdo</Title>
       <Subtitle>Join a random group to compete in a daily challenge. Whoever answers the prompt wins!</Subtitle>
 
-      <BaseBtn 
+      <Link to={ props.linkTo } style={ styles.link }>
+        Get Started
+      </Link>
+      {/* <BaseBtn 
         text="Get Started" 
         size="20px"
         btnW="166px"
         btnH="50px"
-      />
+      /> */}
     </Cont>
   )
 }
@@ -54,3 +57,12 @@ const Subtitle = styled.h2`
   
   margin-top: 0;
 `
+
+var styles = {
+  link: {
+    backgroundColor: "#00918E",
+    width: "166px",
+    height: "50px",
+    fontSize: "20px",
+  }
+}
