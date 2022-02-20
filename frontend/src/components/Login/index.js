@@ -2,27 +2,27 @@ import React from 'react';
 import styled from 'styled-components';
 import Btn from '../Button';
 
-export default class LoginWindow extends React.Component{
-  render() {
-    return (
-      <Cont>
-        <Title>Welcome back!</Title>
-        <Subtitle>Sign in and get your <span style={ styles.quizdo }>Quizdo</span> on!</Subtitle>
-        <Input 
-          type="text" 
-          placeholder='Username'
-        />
-        <Input 
-          type="text" 
-          placeholder='Password'
-        />
+const LoginWindow = (props) => {
+  return (
+    <Cont>
+      <Title>Welcome back!</Title>
+      <Subtitle>Sign in and get your <span style={styles.quizdo}>Quizdo</span> on!</Subtitle>
+      <Input
+        type="text"
+        placeholder='Username'
+      />
+      <Input
+        type="text"
+        placeholder='Password'
+      />
 
-        <Btn text="Login" />
-        <Btn text="Login as Guest" />
-      </Cont>
-    )
-  }
+      <Btn text="Login" />
+      <Btn text="Login as Guest" />
+    </Cont>
+  )
 }
+
+export default LoginWindow;
 
 const Cont = styled.div`
   display: flex;
@@ -34,7 +34,7 @@ const Cont = styled.div`
   border-radius: 20px;
   background-color: #FFFFFF;
 
-  width: 600px;
+  width: 500px;
   height: 500px;
 `
 

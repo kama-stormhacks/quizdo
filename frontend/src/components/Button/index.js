@@ -1,21 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default class BaseBtn extends React.Component{
-  render() {
-    return (
-      <BtnCont onClick={this.props.clickClack}>
-        <BtnText>{ this.props.text }</BtnText>
-      </BtnCont>
-    )
-  }
+const BaseBtn = (props) => {
+  return (
+    <BtnCont>
+      <BtnText>{props.text}</BtnText>
+    </BtnCont>
+  )
 }
 
-class GetStartedBtn extends React.Component{
-  render() {
-    return <BaseBtn text="Get Started" />
-  }
-}
+export default BaseBtn;
 
 const BtnCont = styled.button`
   display: flex;
