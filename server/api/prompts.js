@@ -20,6 +20,8 @@ router.post("/", function (req, res) {
         question: req.body.question,
         answers: req.body.answers,
         category: req.body.category,
+        numParticipants: req.body.numParticipants,
+        numWinners: req.body.numWinners,
     });
     newPrompt.promptId = newPrompt._id;
 

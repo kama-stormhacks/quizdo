@@ -28,6 +28,8 @@ const promptSchema = mongoose.Schema({
     question: String,
     answers: mongoose.Schema.Types.Array,
     category: mongoose.Schema.Types.ObjectId,
+    numParticipants: Number,
+    numWinners: Number,
 });
 const promptModel = mongoose.model("prompts", promptSchema);
 
