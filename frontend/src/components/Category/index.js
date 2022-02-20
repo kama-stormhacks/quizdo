@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import chem from '../../images/chemistry.png'
 
-const Category = (props) =>{
+const Category = (props) => {
     return(
         <Cont>
-            <Image src={props.Pic}></Image>
-            <Subject>{props.Title}</Subject>
+            <Image src={ props.pic }></Image>
+            <Subject>{ props.title }</Subject>
          </Cont>
     )
 }

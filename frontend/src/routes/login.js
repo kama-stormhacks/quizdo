@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import HeaderNav from '../components/Header';
 import LoginWindow from '../components/Login';
+import { Link } from 'react-router-dom';
 
 const LoginPage = () => {
   return (

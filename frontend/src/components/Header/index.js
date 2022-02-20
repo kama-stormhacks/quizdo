@@ -33,7 +33,8 @@ const Cont = styled.div`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
   width: 100vw;
-  height: 100px;
+  height: 50px;
+  padding: 15px;
 `
 
 const LeftInnCont = styled.div`
@@ -60,9 +61,9 @@ const RightInnCont = styled.div`
 var styles = {
   linkText: {
     fontFamily: "Poppins",
-    fontSize: "20px",
+    fontSize: "15px",
     color: "#000",
     textDecoration: "none",
-    
+
   },
 }
