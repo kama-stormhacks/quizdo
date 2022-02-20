@@ -1,11 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
+import logo from '../../images/quizdo_logo.svg';
 
 export default class HeaderNav extends React.Component{
   render() {
     return (
       <Cont>
-        
+        <LeftInnCont>
+          <Logo src={logo} />
+        </LeftInnCont>
+        <RightInnCont>
+          
+        </RightInnCont>
       </Cont>
     )
   }
@@ -19,4 +25,25 @@ const Cont = styled.div`
 
   width: 100vw;
   height: 100px;
+`
+
+const LeftInnCont = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  flex: 1;
+`
+
+const Logo = styled.img`
+  width: 100px;
+  padding-left: 3rem;
+`
+
+const RightInnCont = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  flex: 1;
 `

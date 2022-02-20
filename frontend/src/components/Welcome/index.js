@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import BaseBtn from '../Button';
+import logo from '../../images/quizdo_logo.svg';
 
 export default class WelcomeWindow extends React.Component{
   render() {
     return (
       <Cont>
+        <Logo src={logo} />
         <Title>Welcome to Quizdo</Title>
         <Subtitle>Join a random group to compete in a daily challenge. Whoever answers the prompt wins!</Subtitle>
 
@@ -27,6 +29,10 @@ const Cont = styled.div`
 
   width: 600px;
   height: 500px;
+`
+
+const Logo = styled.img`
+  width: 356px;
 `
 
 const Title = styled.h1`
