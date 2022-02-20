@@ -26,13 +26,8 @@ function Welcome(){
         <HeaderNav />
       </div>
       <div className='welcomeCont'>
-        <WelcomeWindow clickClack={<Link to="login" />} />
+        <WelcomeWindow onClickBtn={() => <Link to="login"/>} />
       </div>
-
-      <Routes>
-        {/* <Route index element={<App />} /> */}
-        <Route path="login" element={<Login />} />
-      </Routes>
     </div>
   )
 }
