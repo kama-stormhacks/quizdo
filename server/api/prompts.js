@@ -20,6 +20,19 @@ router.post("/", function (req, res) {
         question: req.body.question,
         answers: req.body.answers,
         category: req.body.category,
+        numParticipants: req.body.numParticipants,
+        numWinners: req.body.numWinners,
     });
     newPrompt.promptId = newPrompt._id;
+
+    newPrompt.save(function (err) {
+        if (err) {
+          console.log(err);
+          res.status(400).send("Error" + err);
+        } else {
+          res.send(newPrompt);
+        }
+    });
 });
+
+export default router;
